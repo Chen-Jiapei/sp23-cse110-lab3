@@ -1,0 +1,128 @@
+/*Get third party font*/
+
+/*Set the background of the page to black*/
+
+body {
+    background-color: black;
+}
+
+/*Set the text of the page to white and move them to the middle of the page*/
+
+header {
+    display: inline-block;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Bruno Ace", sans-serif;
+}
+
+main {
+    color: #FFFFFF;
+    line-height: 2em;
+    max-width: 900px;
+    min-width: 890px;
+    margin: auto;
+}
+
+/*Set title border style*/
+
+.title {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: hsl(359, 100, 100);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+/*Build decorations on the blank space on the left and right.*/
+/*The decorations are semi-transparant and act like buttons*/
+
+@media (min-width: 1350px) {
+    .leftDecoration {
+        position: fixed; top: 400px; left: 0px; padding: 0;
+        opacity: 0.5;
+    }
+}
+
+.leftDecoration:hover {
+    opacity: 1;
+}
+
+.leftDecoration:active {
+    scale: 110%;
+}
+
+@media (min-width: 1350px) {
+    .rightDecoration {
+        position: fixed; top: 400px; left: 1344px; padding: 0;
+        opacity: 0.5;
+    }
+}
+
+.rightDecoration:hover {
+    opacity: 1;
+}
+
+.rightDecoration:active {
+    scale: 110%;
+}
+
+/*A hidden stand*/
+/*You can't see the stand unless you are a Stand User*/
+
+.standDecoration {
+    display: none;
+    position: absolute; top: 230px; left: 850px;
+}
+
+/*flex container*/
+/*Built for listing pictures of pillarmen*/
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexContainer > img {
+    width: 153px;
+    height: 216px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+}
+
+/*gird container*/
+/*Built for playing JOJO opening video and audio*/
+
+.videoItem {
+    grid-area: video;
+    justify-self: start;
+}
+
+.videoHeaderItem {
+    grid-area: header;
+    justify-self: start;
+}
+
+.videoSidebarItem {
+    grid-area: sidebar;
+    justify-self: start;
+    width: 250px;
+    height: 40px;
+}
+
+.videoAndAudioDisplay {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 215px 200px 215px 250px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "video video video sidebar"
+    "video video video sidebar";
+}
+

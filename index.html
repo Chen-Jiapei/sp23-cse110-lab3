@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bruno+Ace">
     <title>Document</title>
+
+    <style>
+        h2 {
+            display: block;
+            text-decoration-line: overline underline;
+            margin: 10px 10px 10px 10px;
+        }
+
+        /*Set the video and the audio to the middle of the page*/
+        video {
+            position: static;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 1cm;
+
+            border-width: 1px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 5px;
+        }
+
+        audio {
+            line-height: 1in;
+        }
+
+        img {
+            padding: 1ch 10px 1rem 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Meeting Minutes - [BrainStorming About Game Character Abilities]</h1>
-        <h2>Brainstorming</h2>
+        <h1 style="color:White;" class="title">Meeting Minutes - [BrainStorming About Game Character Abilities]</h1>
+        <h2 style="color:White;">Brainstorming</h2>
     </header>
     <main>
+        <img src="StarPlatinum.jpg" alt="Star Platinum" width="200" height="200" class="standDecoration">
         <dl>
             <dt>Meeting Information:</dt>
             <dd>
@@ -33,27 +67,32 @@
                     <li>
                         Report Current Progress
                         <p>
-                            In the last meeting, we discussed about adding four new characters into the storyline we've been working <br>
-                            on: Santana, Wammu, Esidisi, and Kars. Each member will report their current progress on their part and <br>
-                            we will discuss some problems about these characters reported since the last meeting and decide how to <br>
+                            In the last meeting, we discussed about adding four new characters into the storyline we've been working 
+                            on: Santana, Wammu, Esidisi, and Kars. Each member will report their current progress on their part and 
+                            we will discuss some problems about these characters reported since the last meeting and decide how to 
                             deal with them.
                         </p>
-                        <img src="Pillarmen.png" alt="Pillar Men" width="200" height="224">
+                        <div class="flexContainer">
+                            <img src="Wamuu.png" alt="Wammu">
+                            <img src="Kars.png" alt="Kars">
+                            <img src="Esidisi.png" alt="Esidisi">
+                            <img src="Santana.png" alt="Santana">
+                        </div>
                     </li>
                     <li>
                         Brainstorming About Ability Design of New Characters
                         <p>
-                            In this meeting, we will focus on the ability design of the four new characters. So far, if everything goes <br>
-                            on smoothing, we should be about to complete the artistic design, the background story, and corresponding <br>
-                            storyline modification of the new four characters. We will brainstorming about the ability design of the characters <br>
+                            In this meeting, we will focus on the ability design of the four new characters. So far, if everything goes 
+                            on smoothing, we should be about to complete the artistic design, the background story, and corresponding 
+                            storyline modification of the new four characters. We will brainstorming about the ability design of the characters 
                             based on the background story.
                         </p>
                     </li>
                     <li>
                         Designate Work on the Completion of Ability Design and Implementation
                         <p>
-                            If we are able to come up with good ability design based on the criteria of loyal to the background story and <br>
-                            consensus of everyone in the team, we will designate work on the completion of ability design and implementation <br>
+                            If we are able to come up with good ability design based on the criteria of loyal to the background story and 
+                            consensus of everyone in the team, we will designate work on the completion of ability design and implementation 
                             of abilities in the game.
                         </p>
                     </li>
@@ -64,8 +103,8 @@
                 <ol>
                     <li>
                         <p>
-                            In the last meeting we were talking about how and when to release the information of new characters to the players. <br>
-                            We will take some time discussing this issue and decide how should we present the upcoming update to the players in <br>
+                            In the last meeting we were talking about how and when to release the information of new characters to the players. 
+                            We will take some time discussing this issue and decide how should we present the upcoming update to the players in 
                             the next several months.
                         </p>
                     </li>
@@ -86,37 +125,40 @@
                 <ol>
                     <li>
                         <p>
-                            Design Department: We will need to modify some of the scenes in the past storylines based on the background <br>
-                            of the four new characters. We have listed all the scenes we need to modify and we should discuss about this <br>
+                            Design Department: We will need to modify some of the scenes in the past storylines based on the background 
+                            of the four new characters. We have listed all the scenes we need to modify and we should discuss about this 
                             on the next meeting.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Technical Department: We are still working on some bugs caused by the last update. Also there are some modification <br>
-                            of abilities of characters need to be done. We will not be able to get into the development of new characters shortly <br>
+                            Technical Department: We are still working on some bugs caused by the last update. Also there are some modification 
+                            of abilities of characters need to be done. We will not be able to get into the development of new characters shortly 
                             according to our current schedule. 
                         </p>
                     </li>
                 </ol>
             </dd>
         </dl>
-        
-        <video src="JOJO-Bloody-Stream-Opening.mp4" controls width="800" height="450">
-            <p>
-                I'm sorry, your browser doesn't support HTML video. <br>
-                You can check out the full version of this video at https://www.youtube.com/watch?v=PcuTPjgMiXw.
-            </p>
-        </video>
-        
-        <br>
-
-        <audio src="audio-jojo-bloody-stream-opening.mp3" controls>
-            <p>
-                I'm sorry, your browser doesn't support audio file. <br>
-                You can check out the full version of this audio at https://www.youtube.com/watch?v=PcuTPjgMiXw.
-            </p>
-        </audio>
+        <div class="videoAndAudioDisplay">
+            <h3 class="videoHeaderItem">
+                JOJO-Bloody-Stream-Opening
+            </h3>
+            <video src="JOJO-Bloody-Stream-Opening.mp4" controls width="600" height="337" class="videoItem">
+                <p>
+                    I'm sorry, your browser doesn't support HTML video. 
+                    You can check out the full version of this video at https://www.youtube.com/watch?v=PcuTPjgMiXw.
+                </p>
+            </video>
+            <audio src="audio-jojo-bloody-stream-opening.mp3" controls class="videoSidebarItem">
+                <p>
+                    I'm sorry, your browser doesn't support audio file. 
+                    You can check out the full version of this audio at https://www.youtube.com/watch?v=PcuTPjgMiXw.
+                </p>
+            </audio>
+        </div>
+        <img src="JosephJoestar.png" alt="Joseph Joestar" width="300" height="543" class="leftDecoration">
+        <img src="CaesarAnthonioZeppeli.png" alt="Caesar Anthonio Zeppeli" width="300" height="543" class="rightDecoration">
     </main>
 </body>
 </html>
