@@ -9,28 +9,34 @@
     <title>Document</title>
 
     <style>
-        h2 {
+        * {
+            color: white;
+        }
+
+        #Subtitle {
             display: block;
             text-decoration-line: overline underline;
             margin: 10px 10px 10px 10px;
         }
 
         /*Set the video and the audio to the middle of the page*/
-        video {
+        div video {
             position: static;
             padding-left: 10px;
             padding-right: 10px;
             padding-top: 10px;
             padding-bottom: 10px;
             line-height: 1cm;
+        }
 
+        h3 + video {
             border-width: 1px;
             border-style: solid;
             border-color: white;
             border-radius: 5px;
         }
 
-        audio {
+        p ~ audio {
             line-height: 1in;
         }
 
@@ -42,7 +48,7 @@
 <body>
     <header>
         <h1 style="color:White;" class="title">Meeting Minutes - [BrainStorming About Game Character Abilities]</h1>
-        <h2 style="color:White;">Brainstorming</h2>
+        <h2 style="color:White;" id="Subtitle">Brainstorming</h2>
     </header>
     <main>
         <img src="StarPlatinum.jpg" alt="Star Platinum" width="200" height="200" class="standDecoration">
@@ -150,12 +156,15 @@
                     You can check out the full version of this video at https://www.youtube.com/watch?v=PcuTPjgMiXw.
                 </p>
             </video>
-            <audio src="audio-jojo-bloody-stream-opening.mp3" controls class="videoSidebarItem">
+            <audio src="audio-jojo-bloody-stream-opening.mp3" controls class="videoAudioItem">
                 <p>
                     I'm sorry, your browser doesn't support audio file. 
                     You can check out the full version of this audio at https://www.youtube.com/watch?v=PcuTPjgMiXw.
                 </p>
             </audio>
+            <p class="videoDescription">
+                Your next line is...
+            </p>
         </div>
         <img src="JosephJoestar.png" alt="Joseph Joestar" width="300" height="543" class="leftDecoration">
         <img src="CaesarAnthonioZeppeli.png" alt="Caesar Anthonio Zeppeli" width="300" height="543" class="rightDecoration">

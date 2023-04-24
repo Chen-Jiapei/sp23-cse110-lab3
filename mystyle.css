@@ -26,7 +26,7 @@ main {
 
 /*Set title border style*/
 
-.title {
+h1.title {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: hsl(359, 100, 100);
@@ -42,15 +42,7 @@ main {
     .leftDecoration {
         position: fixed; top: 400px; left: 0px; padding: 0;
         opacity: 0.5;
-    }
-}
-
-.leftDecoration:hover {
-    opacity: 1;
-}
-
-.leftDecoration:active {
-    scale: 110%;
+    }    
 }
 
 @media (min-width: 1350px) {
@@ -60,11 +52,11 @@ main {
     }
 }
 
-.rightDecoration:hover {
+.leftDecoration:hover, .rightDecoration:hover {
     opacity: 1;
 }
 
-.rightDecoration:active {
+.leftDecoration:active, .rightDecoration:active {
     scale: 110%;
 }
 
@@ -108,11 +100,23 @@ main {
     justify-self: start;
 }
 
-.videoSidebarItem {
-    grid-area: sidebar;
+.videoAudioItem {
+    grid-area: audio;
     justify-self: start;
     width: 250px;
     height: 40px;
+}
+
+.videoDiscription {
+    grid-area: description;
+}
+
+p[class="videoDescription"] {
+    padding: 2px 2px 2px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
 }
 
 .videoAndAudioDisplay {
@@ -122,7 +126,8 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 
     "header header header header"
-    "video video video sidebar"
-    "video video video sidebar";
+    "video video video audio"
+    "video video video description"
+    "video video video description";
 }
 
